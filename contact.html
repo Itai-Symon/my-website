@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="WebScript.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("BS4lbmDtJ_7zIeSTs");
+        })();
+    </script>
+</head>
+<body>
+    <header class="header-main">
+        <div class="header-main-logo">
+            <img src="images/menu icon.png" alt="menu-logo">
+            <!-- Navigation -->
+            <nav class="header-main-nav">
+                <ul>
+                    <li><a href="index.html" >HOME</menu></a></li>
+                    <li><a href="about_me.html" >ABOUT ME</menu></a></li>
+                    <li><a href="education.html" >EDUCATION</a></li>
+                    <li><a href="emplyment.html" >EMPLOYMENT</a></li>
+                    <li><a href="hobbies.html" >HOBBIES</a></li>
+                    <li><a href="contact.html" >CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+         <!-- social media icon links. -->
+        <div class="header-main-sm">
+            <a href="https://www.facebook.com/itai.symon"><div class="header-main-sm-fb"></div></a>
+            <a href="https://www.instagram.com/itaisymon/"><div class="header-main-sm-in"></div></a>
+        </div>
+    </header>
+
+        <div class="container">
+            <!-- the form is sent on submit. the input tabs are cleared with reset(). 
+                return false, makes sure that the page isn't refreshed / navigated away while submiting. -->
+            <form onsubmit="sendMail(); reset(); return false;">
+            <h3>contact</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message"  rows="4" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        </div>
+</body>
+</html>
+

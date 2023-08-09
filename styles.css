@@ -1,0 +1,290 @@
+/* adapting styling for various screen sizes.  */
+html, body {width: 100vw; height: 100vh;}
+div {width: 100%; height: 70%}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body:after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(images/facebook-icon.webp)  url(images/instagram-color.webp) url(images/menu\ icon\ color.png);
+}
+a{
+    cursor: pointer;
+}
+
+/* navbar styling */
+.header-main {
+    width:100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.header-main-logo {
+    cursor: pointer;
+    width: fit-content;
+    height: 100%;
+    padding-left: 60px ;
+    display: flex;
+}
+.header-main-logo img {
+    height: 40px;
+    align-self: center;
+    transition: transform 0.5s ease-in-out;
+}
+.header-main-logo img:hover{
+    transform: scale(1.25);
+    transition: all 0.5s;
+}
+.header-main-nav {
+    width:fit-content;
+    height: 100%;
+}
+.header-main-nav ul {
+    list-style: none;
+    display: none;
+}
+
+/* created classes onclick. (from here) */
+.header-main-nav ul.visible {
+    display: contents;
+}
+.header-main-logo img.folded {
+    transform: rotate(45deg);
+ }
+/* (until here) */
+
+.header-main-nav ul li{
+  display: inline;
+  float: left;
+}
+.header-main-nav ul li a{
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    text-decoration: none;
+    line-height: 60px;
+    display: block;
+    color: black;
+}
+.header-main-nav ul li a:hover{
+    color: blueviolet;
+}
+.header-main-sm {
+    width: fit-content;
+    height: 100%;    
+    padding-right: 60px ;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.header-main-sm-fb {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/facebook-icon-black.webp);
+    background-repeat: no repeat;
+    background-size: cover;
+}
+.header-main-sm-fb:hover {
+    background-image: url(images/facebook-icon.webp);
+}
+.header-main-sm-in {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/instagram-icon.webp);
+    background-repeat: no repeat;
+    background-size: cover;
+}
+.header-main-sm-in:hover {
+    background-image: url(images/instagram-color.webp);
+}
+
+
+
+
+/* content */
+
+/* home page layout*/
+ h1 {
+    
+    grid-column-start: 1;
+    background-image: radial-gradient(circle, #d64ca1, #ecf019);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 7vh;
+}
+h2 {
+    
+    background-image: radial-gradient(circle, #72a2ee, #97efdb);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 8vh;
+}
+h3 { 
+    background-image: radial-gradient(circle, #f1b78b, #cd5d5d);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 9vh;
+}
+h4 {
+    
+    background-image: radial-gradient(circle, #adacaa, #75fff8);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 9vh;
+}
+.welcome{
+    grid-column-start: 2;
+    grid-column-end:3 ;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    justify-self: center;
+}
+
+/* layout for each section page. */
+.containInfo {
+    width: 100vw;
+    height: 100vh;
+
+    font-family:'Quicksand',sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+
+    background-image: linear-gradient(to top, black,rgb(207, 45, 45));
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    grid-template: 50px 1fr 1fr 100px / 1fr 1fr 1fr;
+    gap: 10px;
+
+    padding:10px;
+    box-sizing: border-box;
+}
+.containInfo div {
+    padding: 10px;
+    border: 0;
+
+}
+.header-info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+    opacity: 0.6;
+    font-size: 4vw;
+}
+.header-info:hover {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+    opacity: 1;
+    font-size: 5vw;
+}
+.content-large {
+    grid-column-start: 1;
+    grid-column-end:3 ;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-image: linear-gradient(to top, rgb(60, 94, 247),rgb(235, 233, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.containInfo img {
+    display: block;
+    max-width: 20vw;
+    max-height: 27vh;
+    width: auto;
+    height: auto;
+    border-radius: 80px;
+    padding: 10px;
+}
+
+/* gallery for hobbies page. */
+div.content-gallery {
+display: inline;
+}
+ div.content-gallery img{
+    max-width: 18vw;
+    max-height: 30vh;
+    width: auto;
+    height: auto;
+    border-radius: 80px;
+}
+
+/* list styling for the education page. */
+.semiTitle {
+    /* font-weight: bolder; */
+    font-style:oblique;
+    font-size: 18px;
+    margin-left: 100px;
+}
+.item {
+    font-size: 17px;
+    margin-left: 120px;
+}
+.courses {
+    font-style: italic;
+}
+
+
+/* contact form */
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    font-family:'Quicksand',sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
+    background-image: linear-gradient(to top, black,rgb(207, 45, 45));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+form {
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+form h3 {
+    
+    margin-bottom: 20px;
+}
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline:none;
+    background:white;
+    font-size: 16px;
+}
+form button {
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    background:#97efdb;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border:0;
+    outline: none;
+}
+form button:hover {
+    background-image: radial-gradient(circle, #f1b78b, #cd5d5d);
+}
+
+
+
+
